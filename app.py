@@ -123,7 +123,7 @@ app.layout = html.Div([
                                     dbc.Card(dbc.CardBody(
                                         [
                                             html.H6(["Manatee Identification Application - (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.P(["My team and I developed an application designed to query the Mote Marine Lab image dataset for similar images to the input image based on scar shape​ and scar ​location​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["My team and I developed an application designed to query the Mote Marine Lab image dataset for similar images to the input image based on scar shape​ and scar ​location.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.  Many different scar patterns do better with different weights, so we also included the option to adjust the weights in the dashboard, including automatic re-adjustment.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
@@ -243,10 +243,53 @@ app.layout = html.Div([
                                     className="twelve columns",                                         
                                 ),
                             ],className="twelve columns",
-                        ),                
-
-
-                ],className="page",)
+                        ),      
+                html.Div(
+                            [                                
+                                html.H5(["Political Facebook Ads Analysis"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button4",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Distributed Computing Final Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["This project explores Pro Publica's Database of political Facebook ads. Our approach was to analyze ad frequencies over time, as well as a sentiment analysis broken down by political issues and organizations."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.Li("Pyspark",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Pyspark Machine Learning Library",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Presentation"),
+                                                        href="https://natewagner10.github.io/Distributed-Computing-Facebook-Ads/main.html",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/Distributed-Computing-Facebook-Ads",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                
+                                                ],className="twelve columns",
+                                                )
+                                            
+                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse4",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ),   
+                ],className="page")
 
 
 
@@ -280,7 +323,25 @@ def toggle_collapse3(n, is_open):
         return not is_open
     return is_open
 
+@app.callback(
+    Output("collapse4", "is_open"),
+    [Input("collapse-button4", "n_clicks")],
+    [State("collapse4", "is_open")],
+)
+def toggle_collapse4(n, is_open):
+    if n:
+        return not is_open
+    return is_open
 
+@app.callback(
+    Output("collapse5", "is_open"),
+    [Input("collapse-button5", "n_clicks")],
+    [State("collapse5", "is_open")],
+)
+def toggle_collapse5(n, is_open):
+    if n:
+        return not is_open
+    return is_open
 
 if __name__ == '__main__':
     app.run_server()
