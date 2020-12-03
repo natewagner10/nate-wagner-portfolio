@@ -32,6 +32,9 @@ df = pd.DataFrame([
 fig = px.timeline(df, x_start="Start", x_end="Finish", y="Name", color="Event", template="plotly_white",hover_data={'Event':False})
 fig.update_yaxes(autorange="reversed", visible=False)
 fig.update_layout(title_text='Timeline of Education & Experience',
+                  font_color="black",
+                  font_family="HelveticaNeue",
+                  font_size=20,
                   hoverlabel=dict(
                         bgcolor="white",
                         font_size=16,
@@ -51,7 +54,7 @@ app.layout = html.Div([
                 html.Div(
                             [
                                 html.Div(
-                                    [html.H3("Nathaniel Wagner")],
+                                    [html.H3("Nathaniel Wagner",style = {'font-size': '48px','font':'HelveticaNeue'})],
                                     className="seven columns main-title",
                                 ),
                                 html.Div(
@@ -68,17 +71,17 @@ app.layout = html.Div([
                             [
                                 html.Div(
                                     [html.P("724 New Jersey Street, West Palm Beach, Florida 33401", 
-                                            style = {'font-size': '14px','font':'HelveticaNeue'})],
+                                            style = {'font-size': '18px','font':'HelveticaNeue'})],
                                     className="twelve columns main-title",
                                 ),
                                 html.Div(
                                     [html.P("(561) 337-0107", 
-                                            style = {'font-size': '14px','font':'HelveticaNeue'})],
+                                            style = {'font-size': '18px','font':'HelveticaNeue'})],
                                     className="twelve columns main-title",
                                 ),                                    
                                 html.Div(
                                     [html.P("natewag1234@gmail.com", 
-                                            style = {'font-size': '14px','font':'HelveticaNeue'})],
+                                            style = {'font-size': '18px','font':'HelveticaNeue'})],
                                     className="twelve columns main-title",
                                 ),                                                                                     
                             ],
@@ -110,7 +113,8 @@ app.layout = html.Div([
                                     "More Information",
                                     id="collapse-button",
                                     className="three columns",
-                                    color="primary"),                        
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
                             ],className="twelve columns padded",
                         ),                                
                 html.Div(
@@ -118,7 +122,7 @@ app.layout = html.Div([
                                 dbc.Collapse(
                                     dbc.Card(dbc.CardBody(
                                         [
-                                            html.H6(["Manatee Identification Application"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.H6(["Manatee Identification Application - (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["My team and I developed an application designed to query the Mote Marine Lab image dataset for similar images to the input image based on scar shape​ and scar ​location​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.  Many different scar patterns do better with different weights, so we also included the option to adjust the weights in the dashboard, including automatic re-adjustment.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
@@ -154,7 +158,8 @@ app.layout = html.Div([
                                     "More Information",
                                     id="collapse-button2",
                                     className="three columns",
-                                    color="primary"),                        
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
                             ],className="twelve columns padded",
                         ),                                
                 html.Div(
@@ -162,7 +167,7 @@ app.layout = html.Div([
                                 dbc.Collapse(
                                     dbc.Card(dbc.CardBody(
                                         [
-                                            html.H6(["Sarasota EDC - Automate Data Entry With Computer Vision"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.H6(["Sarasota EDC - Automate Data Entry With Computer Vision (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["This project explores various techniques to automate the data entry of surveys sent out by the EDC of Sarasota.​"],style = {'font-size': '14px','font':'HelveticaNeue'}, className="twelve columns"),                                            
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'} ,className="twelve columns"),
                                             html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
@@ -204,7 +209,8 @@ app.layout = html.Div([
                                     "More Information",
                                     id="collapse-button3",
                                     className="three columns",
-                                    color="primary"),                        
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
                             ],className="twelve columns padded",
                         ),                                
                 html.Div(
@@ -212,7 +218,7 @@ app.layout = html.Div([
                                 dbc.Collapse(
                                     dbc.Card(dbc.CardBody(
                                         [
-                                            html.H6(["Science and Environment Council"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.H6(["Science and Environment Council (Research Associate)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["New College of Florida professor Dr. Andrey Skripnikov and I use Twitter data to study the 2018 Florida red tide event. Our goal is to develop a framework to enhance response and assesment of future red tide events."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
@@ -278,42 +284,6 @@ def toggle_collapse3(n, is_open):
 
 if __name__ == '__main__':
     app.run_server()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
