@@ -1,272 +1,302 @@
-Last login: Wed Dec  2 11:26:54 on ttys003
-(base) natewagner@Nates-MBP ~ % ls
-Applications			DUSW10783_A.jpg
-DU367_A.jpg			DUSW10783_B.jpg
-DU367_B.jpg			DUSW10785_A.jpg
-DU377_A.jpg			DUSW10785_B.jpg
-DU377_B.jpg			DUSW10787_A.jpg
-DU392_A.jpg			DUSW10787_B.jpg
-DU392_B.jpg			DUSW10788_A.jpg
-DU395_A.jpg			DUSW10788_B.jpg
-DU395_B.jpg			DUSW10789_B.jpg
-DU412_A.jpg			DUSW10790_A.jpg
-DU412_B.jpg			DUSW10790_B.jpg
-DU437_A.jpg			DUSW10791_A.jpg
-DU437_B.jpg			DUSW10791_B.jpg
-DU466_A.jpg			DUSW10792_A.jpg
-DU466_B.jpg			DUSW10792_B.jpg
-DU470_A.jpg			DUSW10794_B.jpg
-DU470_B.jpg			DUSW10795_A.jpg
-DU476_A.jpg			DUSW10795_B.jpg
-DU476_B.jpg			DUSW10795_C.jpg
-DU525_A.jpg			DUSW10796_A.jpg
-DU525_B.jpg			DUSW10796_B.jpg
-DU539_A.jpg			DUSW10797_A.jpg
-DU539_B.jpg			DUSW10797_B.jpg
-DU556_A.jpg			DUSW10798_A.jpg
-DU556_B.jpg			DUSW10798_B.jpg
-DU604_A.jpg			DUSW10799_A.jpg
-DU604_B.jpg			DUSW10799_B.jpg
-DU843_B.jpg			DUSW10800_A.jpg
-DU901_A.jpg			DUSW10800_B.jpg
-DU901_B.jpg			DUSW10801_A.jpg
-DU940_A.jpg			DUSW10801_B.jpg
-DU940_B.jpg			DUSW10802_A.jpg
-DU951_A.jpg			DUSW10802_B.jpg
-DU951_B.jpg			DUSW10803_A.jpg
-DUSW10001_A.jpg			DUSW10803_B.jpg
-DUSW10001_B.jpg			DUSW10804_A.jpg
-DUSW10063_A.jpg			DUSW10804_B.jpg
-DUSW10063_B.jpg			DUSW10805_A.jpg
-DUSW10065_B.jpg			DUSW10805_B.jpg
-DUSW10066_A.jpg			DUSW10806_A.jpg
-DUSW10066_B.jpg			DUSW10806_B.jpg
-DUSW10119_A.jpg			DUSW10807_A.jpg
-DUSW10206_B.jpg			DUSW10808_A.jpg
-DUSW10362_A.jpg			DUSW10808_B.jpg
-DUSW10362_B.jpg			DUSW10809_A.jpg
-DUSW10373_A.jpg			DUSW10809_B.jpg
-DUSW10373_B.jpg			DUSW10811_A.jpg
-DUSW10373_C.jpg			DUSW10811_B.jpg
-DUSW10454_B.jpg			DUSW10812_A.jpg
-DUSW10501_A.jpg			DUSW10812_B.jpg
-DUSW10501_B.jpg			DUSW10813_A.jpg
-DUSW10579_A.jpg			DUSW10813_B.jpg
-DUSW10587_A.jpg			DUSW10814_A.jpg
-DUSW10587_B.jpg			DUSW10814_B.jpg
-DUSW10638_B.jpg			DUSW10815_A.jpg
-DUSW10639_A.jpg			DUSW10815_B.jpg
-DUSW10639_B.jpg			DUSW10816_A.jpg
-DUSW10640_A.jpg			DUSW10816_B.jpg
-DUSW10655_B.jpg			DUSW10817_A.jpg
-DUSW10658_A.jpg			DUSW10817_B.jpg
-DUSW10658_B.jpg			DUSW10818_A.jpg
-DUSW10659_A.jpg			DUSW10818_B.jpg
-DUSW10659_B.jpg			DUSW10819_A.jpg
-DUSW10660_A.jpg			DUSW10819_B.jpg
-DUSW10660_B.jpg			DUSW10820_A.jpg
-DUSW10661_A.jpg			DUSW10820_B.jpg
-DUSW10661_B.jpg			DUSW10821_A.jpg
-DUSW10661_C.jpg			DUSW10821_B.jpg
-DUSW10662_A.jpg			DUSW10822_A.jpg
-DUSW10662_B.jpg			DUSW10822_B.jpg
-DUSW10663_A.jpg			DUSW10823_A.jpg
-DUSW10663_B.jpg			DUSW10823_B.jpg
-DUSW10664_A.jpg			DUSW10824_A.jpg
-DUSW10664_B.jpg			DUSW10824_B.jpg
-DUSW10665_A.jpg			DUSW10825_A.jpg
-DUSW10665_B.jpg			DUSW10825_B.jpg
-DUSW10666_A.jpg			DUSW10826_A.jpg
-DUSW10666_B.jpg			DUSW10826_B.jpg
-DUSW10667_A.jpg			DUSW10827_A.jpg
-DUSW10667_B.jpg			DUSW10827_B.jpg
-DUSW10668_A.jpg			DUSW10828_A.jpg
-DUSW10668_B.jpg			DUSW10828_B.jpg
-DUSW10669_A.jpg			DUSW10829_A.jpg
-DUSW10669_B.jpg			DUSW10829_B.jpg
-DUSW10670_A.jpg			DUSW10830_A.jpg
-DUSW10670_B.jpg			DUSW10830_B.jpg
-DUSW10671_A.jpg			DUSW10831_A.jpg
-DUSW10671_B.jpg			DUSW10831_B.jpg
-DUSW10672_A.jpg			DUSW10832_A.jpg
-DUSW10672_B.jpg			DUSW10832_B.jpg
-DUSW10673_B.jpg			DUSW10833_A.jpg
-DUSW10674_A.jpg			DUSW10835_A.jpg
-DUSW10674_B.jpg			DUSW10835_B.jpg
-DUSW10675_A.jpg			DUSW10839_A.jpg
-DUSW10677_B.jpg			DUSW10839_B.jpg
-DUSW10678_A.jpg			DUSW10841_C.jpg
-DUSW10680_A.jpg			DUSW10865_B.jpg
-DUSW10680_B.jpg			DUSW10866_A.jpg
-DUSW10681_A.jpg			DUSW10868_B.jpg
-DUSW10681_B.jpg			DUSW10869_A.jpg
-DUSW10682_A.jpg			DUSW10869_B.jpg
-DUSW10682_B.jpg			DUSW10870_A.jpg
-DUSW10684_A.jpg			DUSW10870_B.jpg
-DUSW10684_B.jpg			DUSW10871_A.jpg
-DUSW10685_A.jpg			DUSW10871_B.jpg
-DUSW10685_B.jpg			DUSW10872_A.jpg
-DUSW10686_A.jpg			DUSW10872_B.jpg
-DUSW10686_B.jpg			DUSW10873_A.jpg
-DUSW10687_A.jpg			DUSW10873_B.jpg
-DUSW10687_B.jpg			DUSW10875_A.jpg
-DUSW10688_A.jpg			DUSW10875_B.jpg
-DUSW10688_B.jpg			DUSW10876_A.jpg
-DUSW10689_A.jpg			DUSW10876_B.jpg
-DUSW10689_B.jpg			DUSW10877_A.jpg
-DUSW10690_A.jpg			DUSW10877_B.jpg
-DUSW10690_B.jpg			DUSW10878_A.jpg
-DUSW10691_A.jpg			DUSW10878_B.jpg
-DUSW10691_B.jpg			DUSW10879_A.jpg
-DUSW10692_A.jpg			DUSW10879_B.jpg
-DUSW10692_B.jpg			DUSW10880_A.jpg
-DUSW10693_A.jpg			DUSW10880_B.jpg
-DUSW10693_B.jpg			DUSW10881_A.jpg
-DUSW10695_A.jpg			DUSW10881_B.jpg
-DUSW10695_B.jpg			DUSW10882_A.jpg
-DUSW10696_A.jpg			DUSW10882_B.jpg
-DUSW10696_B.jpg			DUSW10883_A.jpg
-DUSW10697_A.jpg			DUSW10883_B.jpg
-DUSW10697_B.jpg			DUSW10884_A.jpg
-DUSW10698_A.jpg			DUSW10884_B.jpg
-DUSW10698_B.jpg			DUSW10885_A.jpg
-DUSW10699_A.jpg			DUSW10885_B.jpg
-DUSW10699_B.jpg			DUSW10886_A.jpg
-DUSW10700_A.jpg			DUSW10886_B.jpg
-DUSW10700_B.jpg			DUSW10887_A.jpg
-DUSW10701_A.jpg			DUSW10887_B.jpg
-DUSW10701_B.jpg			DUSW10888_A.jpg
-DUSW10702_A.jpg			DUSW10888_B.jpg
-DUSW10702_B.jpg			DUSW10889_A.jpg
-DUSW10703_A.jpg			DUSW10889_B.jpg
-DUSW10703_B.jpg			DUSW10890_A.jpg
-DUSW10704_A.jpg			DUSW10890_B.jpg
-DUSW10704_B.jpg			DUSW10891_A.jpg
-DUSW10705_A.jpg			DUSW10891_B.jpg
-DUSW10705_B.jpg			DUSW10892_A.jpg
-DUSW10706_A.jpg			DUSW10892_B.jpg
-DUSW10706_B.jpg			DUSW10893_A.jpg
-DUSW10707_A.jpg			DUSW10893_B.jpg
-DUSW10707_B.jpg			DUSW10895_A.jpg
-DUSW10708_A.jpg			DUSW10895_B.jpg
-DUSW10708_B.jpg			DUSW10896_A.jpg
-DUSW10709_A.jpg			DUSW10896_B.jpg
-DUSW10709_B.jpg			DUSW10897_A.jpg
-DUSW10710_A.jpg			DUSW10897_B.jpg
-DUSW10710_B.jpg			DUSW10898_A.jpg
-DUSW10711_A.jpg			DUSW10898_B.jpg
-DUSW10711_B.jpg			DUSW10899_A.jpg
-DUSW10712_A.jpg			DUSW10899_B.jpg
-DUSW10712_B.jpg			DUSW10900_A.jpg
-DUSW10713_A.jpg			DUSW10900_B.jpg
-DUSW10713_B.jpg			DUSW10902_A.jpg
-DUSW10714_A.jpg			DUSW10902_B.jpg
-DUSW10714_B.jpg			DUSW10903_A.jpg
-DUSW10715_A.jpg			DUSW10905_B.jpg
-DUSW10715_B.jpg			Desktop
-DUSW10717_A.jpg			Documents
-DUSW10717_B.jpg			Downloads
-DUSW10718_A.jpg			Library
-DUSW10718_B.jpg			ML_Final_Project
-DUSW10719_A.jpg			Manatee_Dashboard
-DUSW10719_B.jpg			Mask_RCNN
-DUSW10720_A.jpg			Movies
-DUSW10720_B.jpg			Music
-DUSW10721_A.jpg			Pictures
-DUSW10721_B.jpg			Public
-DUSW10722_A.jpg			Stats2_project
-DUSW10722_B.jpg			U1021_A.jpg
-DUSW10723_A.jpg			U1021_B.jpg
-DUSW10724_B.jpg			U1046_A.jpg
-DUSW10725_A.jpg			U1046_B.jpg
-DUSW10725_B.jpg			U1050_A.jpg
-DUSW10730_A.jpg			U1050_B.jpg
-DUSW10730_B.jpg			Untitled.ipynb
-DUSW10732_B.jpg			assets
-DUSW10733_A.jpg			canny_img.jpg
-DUSW10733_B.jpg			dash-sample-apps
-DUSW10735_A.jpg			data
-DUSW10735_B.jpg			imp_cnn.ipynb
-DUSW10736_A.jpg			labelImg
-DUSW10736_B.jpg			maketraindta.npy
-DUSW10737_A.jpg			maskrcnn_config20200424T1146
-DUSW10737_B.jpg			maskrcnn_config20200424T1155
-DUSW10738_A.jpg			maskrcnn_config20200424T1200
-DUSW10738_B.jpg			maskrcnn_config20200424T1220
-DUSW10739_A.jpg			maskrcnn_config20200424T1401
-DUSW10739_B.jpg			maskrcnn_config20200424T1438
-DUSW10740_A.jpg			maskrcnn_config20200424T1527
-DUSW10740_B.jpg			maskrcnn_config20200424T1717
-DUSW10741_A.jpg			maskrcnn_config20200426T1415
-DUSW10741_B.jpg			maskrcnn_config20200426T1824
-DUSW10742_A.jpg			maskrcnn_config20200427T1206
-DUSW10742_B.jpg			maskrcnn_config20200427T1520
-DUSW10743_A.jpg			maskrcnn_config20200427T1835
-DUSW10743_B.jpg			maskrcnn_config20200428T1136
-DUSW10744_A.jpg			maskrcnn_config20200428T1340
-DUSW10744_B.jpg			maskrcnn_config20200428T1428
-DUSW10745_A.jpg			maskrcnn_config20200428T2005
-DUSW10745_B.jpg			maskrcnn_config20200429T1747
-DUSW10746_A.jpg			maskrcnn_config20200430T1328
-DUSW10746_B.jpg			maskrcnn_config20200430T1336
-DUSW10747_A.jpg			maskrcnn_config20200430T1654
-DUSW10747_B.jpg			maskrcnn_config20200502T0901
-DUSW10748_A.jpg			maskrcnn_config20200502T1129
-DUSW10748_B.jpg			maskrcnn_config20200503T1352
-DUSW10749_A.jpg			maskrcnn_config20200503T1612
-DUSW10749_B.jpg			maskrcnn_config20200503T2043
-DUSW10750_A.jpg			nltk_data
-DUSW10750_B.jpg			opt
-DUSW10780_A.jpg			perfect_AB_pairs.npy
-DUSW10782_A.jpg			samples
-DUSW10782_B.jpg
-(base) natewagner@Nates-MBP ~ % cd assets
-(base) natewagner@Nates-MBP assets % ls
-BLANK_SKETCH_updated.jpg	dash-financial-logo.png
-base.css			risk_reward.png
-base2.css			styles.css
-base3.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % ls
-BLANK_SKETCH_updated.jpg	dash-financial-logo.png
-base.css			risk_reward.png
-base2.css			styles.css
-base3.css
-(base) natewagner@Nates-MBP assets % vim base.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim base.css  
-(base) natewagner@Nates-MBP assets % vim base.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim base.css  
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim styles.css
-(base) natewagner@Nates-MBP assets % vim base2.css 
-(base) natewagner@Nates-MBP assets % pwd
-/Users/natewagner/assets
-(base) natewagner@Nates-MBP assets % vim styles.css
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.page {
+  position: relative;
+  width: 210mm;
+  height: 375mm;
+  min-height: 300mm;
+  padding: 0mm;
+  margin: 10mm auto;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 10px lightgrey;
+}
 
+.pagetwo {
+  position: relative;
+  width: 210mm;
+  min-height: 240mm;
+  padding: 0mm;
+  margin: 10mm auto;
+  border: 1px #d3d3d3 solid;
+  border-radius: 5px;
+  background: white;
+}
+
+.sub_page {
+  padding: 1cm;
+  min-height: 300mm;
+}
+
+@page {
+  size: A5;
+  margin: 0;
+}
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+  .page {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.iframe {
+  border: none;
+}
+
+h6.padded,
+p.padded {
+  padding: 2px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.blue-text {
+  color: #8496b8;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 2px 0px;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+table.reversed tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+table.reversed tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+table {
+  font-size: 1rem;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 0px solid #ddd;
+  padding: 8px;
+}
+
+table.tiny-header tr:first-child {
+  font-size: 8px;
+}
+
+.columns {
+  margin-left: 0 !important;
+}
+
+.row > .columns:not(:first-child) {
+  padding-left: 20px;
+}
+
+h1,
+h5,
+h6 {
+  margin: 0;
+}
+h5 {
+  font-size: 2.6rem;
+}
+h6 {
+  font-size: 1.425rem;
+}
+
+.risk-reward {
+  height: 150px;
+  width: auto;
+}
+
+li {
+  color: #000000;
+  list-style: bullet;
+  padding-left: 0;
+}
+
+.product {
+  position: relative;
+  height: 15%;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 1px;
+  background: #0a3f6e;
+  color: #ffffff;
+}
+.full-view-link {
+  background-color: #0a3f6e;
+  color: white !important;
+  font-size: medium;
+  padding: 15px 15px;
+  float: left;
+  margin-left: 75%;
+  width: 35%;
+  text-align: center;
+  transition-duration: 1s;
+}
+.all-tabs {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.main-title {
+  position: relative;
+  color: #3a3a3a;
+  font-size: 40px !important;
+  width: 80%;
+  border-left: 20px solid #0a3f6e;
+  background: #ffffff;
+  padding-left: 30px;
+}
+
+.subtitle {
+  position: relative;
+  color: #3a3a3a;
+  left: 0;
+  height: 20%;
+  margin: 0mm;
+  border-left: 5px solid #0a3f6e;
+  background: #ffffff;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  padding-right: 60px;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  margin: 25px 25px;
+}
+
+a:link {
+  color: #696969;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #696969;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  opacity: 0.6;
+}
+
+/* selected link */
+a:active {
+  color: lightgrey;
+  text-decoration: underline;
+}
+
+.greyline {
+  width: 90%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.tab {
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  border-bottom-style: none;
+  border-top-style: none;
+  border-right-style: none;
+  padding: 5px 10px;
+}
+
+.rowrow {
+  margin: auto;
+  text-align: center;
+  width: 97%;
+}
+
+.rowrow2 {
+  margin: auto;
+  width: 97%;
+}
+
+.tablast {
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  border-bottom-style: none;
+  border-top-style: none;
+  color: black;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#learn-more-button {
+  float: right;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: none;
+  margin: 25px 25px;
+}
+
+/* for screens smaller than 768px */
+@media only screen and (max-width: 550px) {
+  .tab {
+    display: block;
+  }
+  .tablast {
+    display: block;
+    border-right-style: none;
+  }
+  .page {
+    width: auto;
+  }
+  .sub_page {
+    width: auto;
+  }
+  .risk-reward {
+    height: 120px;
+    width: auto;
+  }
+  .logo {
+    height: 20px;
+    width: auto;
+  }
   #learn-more-button {
     line-height: 0;
     font-size: 10px;
