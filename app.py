@@ -18,19 +18,19 @@ import plotly.graph_objs as go
 
 
 df = pd.DataFrame([
-    dict(Name="Palm Beach State College", Start='2014-08-01', Finish='2016-05-01', Event="Education"),
-    dict(Name="Santa Fe College", Start='2016-08-01', Finish='2017-05-01', Event="Education"),    
-    dict(Name="University of Florida", Start='2017-08-01', Finish='2019-05-01', Event="Education"),        
-    dict(Name="Anchor Wealth Group", Start='2017-06-01', Finish='2017-08-01', Event="Internship/Work"),
-    dict(Name="RGD Consulting Engineers", Start='2019-06-01', Finish='2019-08-01', Event="Internship/Work"),
-    dict(Name="Bradenton Economic Development Corp", Start='2019-09-01', Finish='2020-02-01', Event="Internship/Work"),
-    dict(Name="Economic Development Corp of Sarasota", Start='2020-01-01', Finish='2020-05-01', Event="Internship/Work"),    
-    dict(Name="Mote Marine Lab", Start='2020-07-01', Finish='2020-12-01', Event="Internship/Work"),        
-    dict(Name="Red Tide Research", Start='2020-07-01', Finish='2020-12-01', Event="Internship/Work"),            
-    dict(Name="New College of Florida, MSDS", Start='2019-08-01', Finish='2020-12-01', Event="Education")
+    dict(Organization="Palm Beach State College", Start='2014-08-01', Finish='2016-05-01', Event="Education"),
+    dict(Organization="Santa Fe College", Start='2016-08-01', Finish='2017-05-01', Event="Education"),    
+    dict(Organization="University of Florida", Start='2017-08-01', Finish='2019-05-01', Event="Education"),        
+    dict(Organization="Anchor Wealth Group", Start='2017-06-01', Finish='2017-08-01', Event="Internship/Work"),
+    dict(Organization="RGD Consulting Engineers", Start='2019-06-01', Finish='2019-08-01', Event="Internship/Work"),
+    dict(Organization="Bradenton Economic Development Corp", Start='2019-09-01', Finish='2020-02-01', Event="Internship/Work"),
+    dict(Organization="Economic Development Corp of Sarasota", Start='2020-01-01', Finish='2020-05-01', Event="Internship/Work"),    
+    dict(Organization="Mote Marine Lab", Start='2020-07-01', Finish='2020-12-01', Event="Internship/Work"),        
+    dict(Organization="Red Tide Research", Start='2020-07-01', Finish='2020-12-01', Event="Internship/Work"),            
+    dict(Organization="New College of Florida, MSDS", Start='2019-08-01', Finish='2020-12-01', Event="Education")
 ])
 
-fig = px.timeline(df, x_start="Start", x_end="Finish", y="Name", color="Event", template="plotly_white",hover_data={'Event':False})
+fig = px.timeline(df, x_start="Start", x_end="Finish", y="Organization", color="Event", template="plotly_white",hover_data={'Event':False})
 fig.update_yaxes(autorange="reversed", visible=False)
 fig.update_layout(title_text='Timeline of Education & Experience',
                   font_color="black",
@@ -89,7 +89,7 @@ app.layout = html.Div([
                 html.Div(
                             [
                                 html.Div(
-                                    [html.H3("Nathaniel Wagner",style = {'font-size': '48px','font':'HelveticaNeue'})],
+                                    [html.H3("Nathaniel Wagner",style = {'font-size': '48px','font':'HelveticaNeue','font-color': '#000000'})],
                                     className="seven columns main-title",
                                 ),
                                 html.Div(
