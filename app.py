@@ -495,26 +495,26 @@ app.layout = html.Div([
                                 ),
                             ],className="twelve columns",                            
                         ),
-                # html.Div(
-                #             [
-                #                 html.Br([]),
-                #                 html.Br([]),
-                #                 html.H3(["Tools Used"],className="subtitle padded"),
-                #                 html.Hr(),
-                #             ],className="twelve columns"),                
-                # html.Div(
-                #             [
-                #                 html.Div([
-                #                     dcc.Graph(figure=dataSkills,
-                #                         config={
-                #                             'displayModeBar': False
-                #                                 }),                                                                                                           
-                #                     ],className="twelve columns center-aligned",     
-                #                 ),
+                html.Div(
+                            [
+                                html.Br([]),
+                                html.Br([]),
+                                html.H3(["Tools Used"],className="subtitle padded"),
+                                html.Hr(),
+                            ],className="twelve columns"),                
+                html.Div(
+                            [
+                                html.Div([
+                                    dcc.Graph(figure=dataSkills,
+                                        config={
+                                            'displayModeBar': False
+                                                }),                                                                                                           
+                                    ],className="twelve columns center-aligned",     
+                                ),
 
                                 
-                #             ],style={'margin-left': '15%'}
-                #     ),                     
+                            ],style={'margin-left': '15%'}
+                    ),                     
 
                 ],className="page")
 
