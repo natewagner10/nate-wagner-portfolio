@@ -494,31 +494,8 @@ app.layout = html.Div([
                                     className="twelve columns",                                         
                                 ),
                             ],className="twelve columns",                            
-                        ),
-                html.Div(
-                            [
-                                html.Br([]),
-                                html.Br([]),
-                                html.H3(["Tools Used"],className="subtitle padded"),
-                                html.Hr(),
-                            ],className="twelve columns"),                
-                html.Div(
-                            [
-                                html.Div([
-                                    dcc.Graph(figure=dataSkills,
-                                        config={
-                                            'displayModeBar': False
-                                                }),                                                                                                           
-                                    ],className="twelve columns center-aligned",     
-                                ),
-
-                                
-                            ],style={'margin-left': '15%'}
-                    ),                     
-
+                        ),                     
                 ],className="page")
-
-
 
 @app.callback(
     Output("collapse", "is_open"),
@@ -602,5 +579,3 @@ def toggle_collapse8(n, is_open):
 
 if __name__ == '__main__':
     app.run_server()
-
-
