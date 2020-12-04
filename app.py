@@ -13,6 +13,7 @@ from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 import plotly.express as px
 import pandas as pd
+import plotly.graph_objs as go
 
 
 
@@ -41,6 +42,40 @@ fig.update_layout(title_text='Timeline of Education & Experience',
                         font_family="HelveticaNeue"
     ))
 
+
+
+dataSkills=dict(data=[go.Scatterpolar(
+                          r = [62.5, 87.5, 87.5, 75, 100, 25, 25, 100, 12.5, 37.6, 25, 25, 25, 12.5, 12.5, 62.5],
+                          theta = ['Python','R', 'Tidyverse', 'Machine Learning', 'Statistics', 'Deep Learning', 'Pyspark', 'Data Viz', 'Plotly Dash', 'Shiny', 'Pandas', 'Numpy', 'OpenCv/Pillow','Pytorch', 'Tensorflow', 'Python'],
+                          fill = 'toself',
+                          line = dict(color='salmon'),
+                          hoverinfo='none'
+                                            )
+                           ],
+
+              layout= go.Layout(xaxis=dict(visible=False),
+                                yaxis=dict(visible=False),
+                                font=dict(size=14),
+                                polar = dict(
+                                            radialaxis = dict(
+                                                              visible = True,
+                                                              range = [0, 100],
+                                                              tickvals=[25,50,75,100],
+                                                              ticktext=['25%','50%','75%','100%'],
+                                                              tickmode='array',
+                                                              tickangle=25,
+                                                              tickfont=dict(
+                                                                    family='Arial',
+                                                                    size=13,
+                                                                    color='#acb3bf'
+                                                                            )
+                                                                )
+                                              ),
+                                showlegend = False,
+                                height=500,
+                                width=500
+                                )
+             )
 
 
 
@@ -289,6 +324,198 @@ app.layout = html.Div([
                                 ),
                             ],className="twelve columns",
                         ),   
+                html.Div(
+                            [                                
+                                html.H5(["COVID-19 Dashboard"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button5",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Data Visualization and Reporting Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["This project consist of a Shiny Dashboard visualizing aggregated Covid-19 timeseries data from the New York Times."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                        
+                                            html.Li("R Shiny",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Dashboard"),
+                                                        href="https://nwagner.shinyapps.io/COVID-19/?_ga=2.186977761.896718136.1589809159-688664654.1589372921",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/DataViz_Final_Project",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                
+                                                ],className="twelve columns",
+                                                )
+                                            
+                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse5",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ),                  
+                html.Div(
+                            [                                
+                                html.H5(["Uber Trips Analysis"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button6",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Distributed Computing Course Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["Using distributed computing systems to develop a story about Uber pickup data in New York 2014."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                        
+                                            html.Li("Pyspark",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("R Shiny",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Dashboard"),
+                                                        href="https://mandabucklin7.shinyapps.io/Uber-Pickups/",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/Distributed-Computing-Uber-Project",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                
+                                                ],className="twelve columns",
+                                                )
+                                            
+                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse6",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ),  
+                html.Div(
+                            [                                
+                                html.H5(["2018 PGA Tour Season Analysis"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button7",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Statistical Inference II Final Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["For our final project we explored data from the 2018 PGA Tour Season. We use methods such as linear and logistic regression as well as chi-squared test."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                                                             
+                                            html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Presentation"),
+                                                        href="https://natewagner10.github.io/Stat-Inference-Final-Project/main.html",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/Stat-Inference-Final-Project",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                
+                                                ],className="twelve columns",
+                                                )
+                                            
+                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse7",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ), 
+                html.Div(
+                            [                                
+                                html.H5(["Ride Sharing Analysis"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button8",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Statistical Inference I Final Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["For our final project we explored Uber and Lyft pricing data."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                                                             
+                                            html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Presentation"),
+                                                        href="https://natewagner10.github.io/Ride-Sharing-Project/stats_project.html",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/Ride-Sharing-Project",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                
+                                                ],className="twelve columns",
+                                                )
+                                            
+                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse8",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",                            
+                        ),
+                # html.Div(
+                #             [
+                #                 html.Br([]),
+                #                 html.Br([]),
+                #                 html.H3(["Tools Used"],className="subtitle padded"),
+                #                 html.Hr(),
+                #             ],className="twelve columns"),                
+                # html.Div(
+                #             [
+                #                 html.Div([
+                #                     dcc.Graph(figure=dataSkills,
+                #                         config={
+                #                             'displayModeBar': False
+                #                                 }),                                                                                                           
+                #                     ],className="twelve columns center-aligned",     
+                #                 ),
+
+                                
+                #             ],style={'margin-left': '15%'}
+                #     ),                     
+
                 ],className="page")
 
 
@@ -343,8 +570,37 @@ def toggle_collapse5(n, is_open):
         return not is_open
     return is_open
 
+@app.callback(
+    Output("collapse6", "is_open"),
+    [Input("collapse-button6", "n_clicks")],
+    [State("collapse6", "is_open")],
+)
+def toggle_collapse6(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("collapse7", "is_open"),
+    [Input("collapse-button7", "n_clicks")],
+    [State("collapse7", "is_open")],
+)
+def toggle_collapse7(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("collapse8", "is_open"),
+    [Input("collapse-button8", "n_clicks")],
+    [State("collapse8", "is_open")],
+)
+def toggle_collapse8(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
 if __name__ == '__main__':
     app.run_server()
-
 
 
