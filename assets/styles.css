@@ -14,6 +14,7 @@ body {
 .page {
   position: relative;
   width: 210mm;
+  height: 375mm;
   min-height: 300mm;
   padding: 0mm;
   margin: 10mm auto;
@@ -146,8 +147,8 @@ h6 {
 }
 
 li {
-  color: #7a7a7a;
-  list-style: square;
+  color: #000000;
+  list-style: bullet;
   padding-left: 0;
 }
 
