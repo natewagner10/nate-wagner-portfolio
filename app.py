@@ -14,6 +14,7 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objs as go
+import base64
 
 
 
@@ -32,6 +33,10 @@ df = pd.DataFrame([
 
 fig = px.timeline(df, x_start="Start", x_end="Finish", y="Organization", color="Event", template="plotly_white",hover_data={'Event':False})
 fig.update_yaxes(autorange="reversed", visible=False)
+fig.add_annotation(text="Hover For More Information!",
+                  xref="paper", yref="paper",
+                  x=0.1, y=0.1, showarrow=False,
+                  font_size=15)
 fig.update_layout(title_text='Timeline of Education & Experience',
                   font_color="black",
                   font_family="HelveticaNeue",
@@ -81,6 +86,18 @@ dataSkills=dict(data=[go.Scatterpolar(
 
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LITERA])
 server = app.server
+
+
+
+encoded_image = base64.b64encode(open('assets/dash_example.png', 'rb').read())
+encoded_image2 = base64.b64encode(open('assets/survey.png', 'rb').read())
+encoded_image3 = base64.b64encode(open('assets/cloud.png', 'rb').read())
+encoded_image4 = base64.b64encode(open('assets/ads_plot.png', 'rb').read())
+encoded_image5 = base64.b64encode(open('assets/covid.png', 'rb').read())
+encoded_image6 = base64.b64encode(open('assets/uber.png', 'rb').read())
+encoded_image7 = base64.b64encode(open('assets/golf.png', 'rb').read())
+encoded_image8 = base64.b64encode(open('assets/uber_lyft.png', 'rb').read())
+
 
 
 app.layout = html.Div([    
@@ -156,16 +173,18 @@ app.layout = html.Div([
                             [
                                 dbc.Collapse(
                                     dbc.Card(dbc.CardBody(
-                                        [
+                                        [      
+                                            #html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()), className = "six columns"),
                                             html.H6(["Manatee Identification Application - (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["My team and I developed an application designed to query the Mote Marine Lab image dataset for similar images to the input image based on scar shape​ and scar ​location.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.  Many different scar patterns do better with different weights, so we also included the option to adjust the weights in the dashboard, including automatic re-adjustment.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.  Many different scar patterns do better with different weights, so we also included the option to adjust the weights in the dashboard, including automatic re-adjustment.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
+                                            html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
-                                            html.Li("Plotly Dash",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
-                                            html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
-                                            html.Div(
-                                                [
+                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.Li("Plotly Dash",style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
+                                            #html.Div(
+                                            #    [
                                                     html.A(
                                                         html.Button("See Application"),
                                                         href="https://identify-manatee.herokuapp.com/",
@@ -176,9 +195,14 @@ app.layout = html.Div([
                                                         href="https://github.com/natewagner10/Mote-Marine-Lab",
                                                         className="twelve columns left-aligned",
                                                     ),                                                                                                
-                                                ],className="twelve columns",
-                                                )
+                                            #    ],className="twelve columns",
+                                            #    ),                                            
                                             
+                                            ],className="six columns"),
+                                            
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()), className = "six columns", style={'height':'100%', 'width':'100%'}),
+                                                ],className="six columns", style={'position': 'absolute'}),
                                             
                                         ],className="twelve columns"),),
                                     id="collapse",
@@ -204,6 +228,7 @@ app.layout = html.Div([
                                         [
                                             html.H6(["Sarasota EDC - Automate Data Entry With Computer Vision (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["This project explores various techniques to automate the data entry of surveys sent out by the EDC of Sarasota.​"],style = {'font-size': '14px','font':'HelveticaNeue'}, className="twelve columns"),                                            
+                                            html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'} ,className="twelve columns"),
                                             html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("Tenserflow - Keras",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
@@ -229,8 +254,10 @@ app.layout = html.Div([
                                                     ),                                                                                             
                                                 ],className="twelve columns",
                                                 )
-                                            
-                                            
+                                            ],className="six columns"),
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image2.decode()), className = "six columns", style={'height':'100%', 'width':'100%','vertical-align': 'middle'}),
+                                                ],className="six columns", style={'position': 'absolute', 'margin-top':'20px'}),                                            
                                         ],className="twelve columns"),),
                                     id="collapse2",
                                     className="twelve columns",                                         
@@ -255,6 +282,7 @@ app.layout = html.Div([
                                         [
                                             html.H6(["Science and Environment Council (Research Associate)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["New College of Florida professor Dr. Andrey Skripnikov and I use Twitter data to study the 2018 Florida red tide event. Our goal is to develop a framework to enhance response and assesment of future red tide events."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Div(
@@ -271,7 +299,11 @@ app.layout = html.Div([
                                                     ),                                                                                                
                                                 ],className="twelve columns",
                                                 )
+                                            ],className="six columns"),
                                             
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image3.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
+                                                ],className="six columns"),                                            
                                             
                                         ],className="twelve columns"),),
                                     id="collapse3",
@@ -297,6 +329,7 @@ app.layout = html.Div([
                                         [
                                             html.H6(["Distributed Computing Final Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["This project explores Pro Publica's Database of political Facebook ads. Our approach was to analyze ad frequencies over time, as well as a sentiment analysis broken down by political issues and organizations."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.Li("Pyspark",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("Pyspark Machine Learning Library",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
@@ -316,8 +349,12 @@ app.layout = html.Div([
                                                     ),                                                                                                
                                                 ],className="twelve columns",
                                                 )
+                                            ],className="six columns"),
                                             
-                                            
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image4.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
+                                                ],className="six columns", style={'position': 'absolute', 'margin-top':'20px'}),                                            
+                                             
                                         ],className="twelve columns"),),
                                     id="collapse4",
                                     className="twelve columns",                                         
@@ -342,6 +379,7 @@ app.layout = html.Div([
                                         [
                                             html.H6(["Data Visualization and Reporting Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["This project consist of a Shiny Dashboard visualizing aggregated Covid-19 timeseries data from the New York Times."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Div([                                            
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                        
                                             html.Li("R Shiny",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
@@ -359,8 +397,12 @@ app.layout = html.Div([
                                                     ),                                                                                                
                                                 ],className="twelve columns",
                                                 )
+                                            ],className="six columns"),
                                             
-                                            
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image5.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
+                                                ],className="six columns", style={'position': 'absolute'}),                                            
+                                             
                                         ],className="twelve columns"),),
                                     id="collapse5",
                                     className="twelve columns",                                         
@@ -385,6 +427,7 @@ app.layout = html.Div([
                                         [
                                             html.H6(["Distributed Computing Course Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["Using distributed computing systems to develop a story about Uber pickup data in New York 2014."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Div([                                            
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                        
                                             html.Li("Pyspark",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("R Shiny",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
@@ -403,8 +446,12 @@ app.layout = html.Div([
                                                     ),                                                                                                
                                                 ],className="twelve columns",
                                                 )
+                                            ],className="six columns"),
                                             
-                                            
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image6.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
+                                                ],className="six columns", style={'position': 'absolute', 'margin-top':'20px'}),                                            
+                                               
                                         ],className="twelve columns"),),
                                     id="collapse6",
                                     className="twelve columns",                                         
@@ -429,6 +476,7 @@ app.layout = html.Div([
                                         [
                                             html.H6(["Statistical Inference II Final Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["For our final project we explored data from the 2018 PGA Tour Season. We use methods such as linear and logistic regression as well as chi-squared test."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                                                             
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Div(
@@ -446,7 +494,12 @@ app.layout = html.Div([
                                                 ],className="twelve columns",
                                                 )
                                             
+                                            ],className="six columns"),
                                             
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image7.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
+                                                ],className="six columns", style={'position': 'absolute'}),                                            
+                                              
                                         ],className="twelve columns"),),
                                     id="collapse7",
                                     className="twelve columns",                                         
@@ -471,6 +524,7 @@ app.layout = html.Div([
                                         [
                                             html.H6(["Statistical Inference I Final Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["For our final project we explored Uber and Lyft pricing data."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                                                             
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Div(
@@ -487,15 +541,42 @@ app.layout = html.Div([
                                                     ),                                                                                                
                                                 ],className="twelve columns",
                                                 )
+                                            ],className="six columns"),
                                             
-                                            
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image8.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
+                                                ],className="six columns", style={'position': 'relative', 'margin-top':'20px'}),                                            
+                                                                                          
                                         ],className="twelve columns"),),
                                     id="collapse8",
                                     className="twelve columns",                                         
                                 ),
                             ],className="twelve columns",                            
-                        ),                     
+                        ),
+                # html.Div(
+                #             [
+                #                 html.Br([]),
+                #                 html.Br([]),
+                #                 html.H3(["Tools Used"],className="subtitle padded"),
+                #                 html.Hr(),
+                #             ],className="twelve columns"),                
+                # html.Div(
+                #             [
+                #                 html.Div([
+                #                     dcc.Graph(figure=dataSkills,
+                #                         config={
+                #                             'displayModeBar': False
+                #                                 }),                                                                                                           
+                #                     ],className="twelve columns center-aligned",     
+                #                 ),
+
+                                
+                #             ],style={'margin-left': '15%'}
+                #     ),                     
+
                 ],className="page")
+
+
 
 @app.callback(
     Output("collapse", "is_open"),
@@ -579,3 +660,4 @@ def toggle_collapse8(n, is_open):
 
 if __name__ == '__main__':
     app.run_server()
+
