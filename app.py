@@ -97,6 +97,7 @@ encoded_image5 = base64.b64encode(open('assets/covid.png', 'rb').read())
 encoded_image6 = base64.b64encode(open('assets/uber.png', 'rb').read())
 encoded_image7 = base64.b64encode(open('assets/golf.png', 'rb').read())
 encoded_image8 = base64.b64encode(open('assets/uber_lyft.png', 'rb').read())
+encoded_image9 = base64.b64encode(open('assets/ts.png', 'rb').read())
 
 
 
@@ -180,9 +181,11 @@ app.layout = html.Div([
                                             html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.  Many different scar patterns do better with different weights, so we also included the option to adjust the weights in the dashboard, including automatic re-adjustment.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
                                             html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.Li("Plotly Dash",style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
-                                            html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
+                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Plotly Dash",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
+                                            html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                        
+                                            html.Li("Image Processing",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                    
+                                            html.Li("Siamese Neural Networks",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                                
                                             #html.Div(
                                             #    [
                                                     html.A(
@@ -232,6 +235,7 @@ app.layout = html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'} ,className="twelve columns"),
                                             html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("Tenserflow - Keras",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
+                                            html.Li("Convolutional Neural Networks",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                        
                                             html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("Mask R-CNN",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
@@ -285,6 +289,7 @@ app.layout = html.Div([
                                             html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Li("Sentiment Analysis",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
                                             html.Div(
                                                 [
                                                     html.A(
@@ -310,7 +315,56 @@ app.layout = html.Div([
                                     className="twelve columns",                                         
                                 ),
                             ],className="twelve columns",
-                        ),      
+                        ),
+                html.Div(
+                            [                                
+                                html.H5(["Time Series - US Wildfires"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button9",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Topics in Statistics - Time Series Project"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["This project explores the relationship between precipitation/temperature and US wildfire statistics from 1992 to 2015.​"],style = {'font-size': '14px','font':'HelveticaNeue'}, className="twelve columns"),                                            
+                                            html.Div([
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'} ,className="twelve columns"),
+                                            html.Li("R",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
+                                            html.Li("fpp2 package",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
+                                            html.Li("Dynamic Regression with ARIMA Errors",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Multiple Linear Regression",style = {'font-size': '14px','font':'HelveticaNeue'}),                                        
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Presentation"),
+                                                        href="https://natewagner10.github.io/topics-in-stats/docs/wildfires4.html",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/topics-in-stats",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                 
+                                                ],className="twelve columns",
+                                                )
+                                            ],className="six columns"),
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image9.decode()), className = "six columns", style={'height':'100%', 'width':'100%','vertical-align': 'middle'}),
+                                                ],className="six columns", style={'position': 'absolute'}),                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse9",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ),                 
                 html.Div(
                             [                                
                                 html.H5(["Political Facebook Ads Analysis"],className="nine columns"),
@@ -334,6 +388,7 @@ app.layout = html.Div([
                                             html.Li("Pyspark",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("Pyspark Machine Learning Library",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
                                             html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("Logistic Regression",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Div(
                                                 [
@@ -431,6 +486,7 @@ app.layout = html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                        
                                             html.Li("Pyspark",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("R Shiny",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("Leaflet",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                           
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Div(
                                                 [
@@ -479,6 +535,12 @@ app.layout = html.Div([
                                             html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                                                             
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Li("Chi-Squared Test",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Li("Linear Regression & Interaction Terms",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("Hypothesis Test",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Li("Backward Selection AIC",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                   
+                                            html.Li("Resdiual Diagnostics",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                               
+                                            html.Li("Logistic Regression",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                                                                           
                                             html.Div(
                                                 [
                                                     html.A(
@@ -498,7 +560,7 @@ app.layout = html.Div([
                                             
                                             html.Div([
                                                 html.Img(src='data:image/png;base64,{}'.format(encoded_image7.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
-                                                ],className="six columns", style={'position': 'absolute'}),                                            
+                                                ],className="six columns", style={'position': 'absolute', 'margin-top': '20px'}),                                            
                                               
                                         ],className="twelve columns"),),
                                     id="collapse7",
@@ -527,6 +589,8 @@ app.layout = html.Div([
                                             html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                                                             
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Li("Two Sample Hypothesis Test",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Li("Linear Regression",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Div(
                                                 [
                                                     html.A(
@@ -658,6 +722,17 @@ def toggle_collapse8(n, is_open):
         return not is_open
     return is_open
 
+@app.callback(
+    Output("collapse9", "is_open"),
+    [Input("collapse-button9", "n_clicks")],
+    [State("collapse9", "is_open")],
+)
+def toggle_collapse9(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
 if __name__ == '__main__':
     app.run_server()
+
 
