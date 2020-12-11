@@ -591,6 +591,7 @@ app.layout = html.Div([
                                             html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Li("Two Sample Hypothesis Test",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Li("Linear Regression",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Li("Simpson's Paradox",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
                                             html.Div(
                                                 [
                                                     html.A(
@@ -609,7 +610,7 @@ app.layout = html.Div([
                                             
                                             html.Div([
                                                 html.Img(src='data:image/png;base64,{}'.format(encoded_image8.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
-                                                ],className="six columns", style={'position': 'relative', 'margin-top':'20px'}),                                            
+                                                ],className="six columns", style={'position': 'absolute'}),                                            
                                                                                           
                                         ],className="twelve columns"),),
                                     id="collapse8",
@@ -734,5 +735,6 @@ def toggle_collapse9(n, is_open):
 
 if __name__ == '__main__':
     app.run_server()
+
 
 
