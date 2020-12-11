@@ -345,7 +345,7 @@ app.layout = html.Div([
                                                 [
                                                     html.A(
                                                         html.Button("See Presentation"),
-                                                        href="https://natewagner10.github.io/topics-in-stats/docs/wildfires4.html",
+                                                        href="https://natewagner10.github.io/topics-in-stats/wildfires4.html",
                                                         className="twelve columns left-aligned",
                                                     ),                                                        
                                                     html.A(
