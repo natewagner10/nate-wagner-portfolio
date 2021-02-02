@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Thu Dec  3 11:22:18 2020
 
@@ -178,7 +176,7 @@ app.layout = html.Div([
                                             #html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()), className = "six columns"),
                                             html.H6(["Manatee Identification Application - (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["My team and I developed an application designed to query the Mote Marine Lab image dataset for similar images to the input image based on scar shape​ and scar ​location.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.  Many different scar patterns do better with different weights, so we also included the option to adjust the weights in the dashboard, including automatic re-adjustment.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
+                                            html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
                                             html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
@@ -799,4 +797,3 @@ def toggle_collapse10(n, is_open):
 
 if __name__ == '__main__':
     app.run_server()
-
