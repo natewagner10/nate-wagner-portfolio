@@ -188,11 +188,11 @@ app.layout = html.Div([
                                             html.Li("Siamese Neural Networks",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                                
                                             #html.Div(
                                             #    [
-                                                    html.A(
-                                                        html.Button("See Application"),
-                                                        href="https://identify-manatee.herokuapp.com/",
-                                                        className="twelve columns left-aligned",
-                                                    ),                                                        
+                                                    #html.A(
+                                                    #    html.Button("See Application"),
+                                                    #    href="https://identify-manatee.herokuapp.com/",
+                                                    #    className="twelve columns left-aligned",
+                                                    #),                                                        
                                                     html.A(
                                                         html.Button("See Github"),
                                                         href="https://github.com/natewagner10/Mote-Marine-Lab",
@@ -213,6 +213,60 @@ app.layout = html.Div([
                                 ),
                             ],className="twelve columns",
                         ),
+                html.Div(
+                            [                                
+                                html.H5(["Army Research Lab Project"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button10",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [      
+                                            #html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()), className = "six columns"),
+                                            html.H6(["Unsupervised Future Frame Prediction Of Complex Systems"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["We are interested in either extracting physical laws or predicting the changes in a system over time using deep neural networks. ​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["We propose an autoencoder & reinforcement learning approach to utilize a continuous policy network in order to obtain a distribution of the most likely next states from the current state and reward our network when it chooses a similar trajectory to the actual next frame.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
+                                            html.Div([
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                        
+                                            html.Li("Image Processing",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                    
+                                            html.Li("Reinforcement Learning",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                                
+                                            html.Li("Adversarial Autoencoders",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                                
+                                            #html.Div(
+                                            #    [
+                                                    html.A(
+                                                        html.Button("See Research Paper"),
+                                                        href="https://github.com/natewagner10/DeepLearningOfDynamics/blob/master/papers/Frame_Prediction_Complex_System.pdf",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/DeepLearningOfDynamics",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                
+                                            #    ],className="twelve columns",
+                                            #    ),                                            
+                                            
+                                            ],className="six columns"),
+                                            
+                                            #html.Div([
+                                            #    html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()), className = "six columns", style={'height':'100%', 'width':'100%'}),
+                                            #    ],className="six columns", style={'position': 'absolute'}),
+                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse10",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ),                
                 html.Div(
                             [                                
                                 html.H5(["Sarasota Economic Development Corp"],className="nine columns"),
@@ -733,8 +787,16 @@ def toggle_collapse9(n, is_open):
         return not is_open
     return is_open
 
+@app.callback(
+    Output("collapse10", "is_open"),
+    [Input("collapse-button10", "n_clicks")],
+    [State("collapse10", "is_open")],
+)
+def toggle_collapse10(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
 if __name__ == '__main__':
     app.run_server()
-
-
 
