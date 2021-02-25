@@ -193,7 +193,7 @@ app.layout = html.Div([
                                                     #),                                                        
                                                     html.A(
                                                         html.Button("See Github"),
-                                                        href="https://github.com/natewagner10/Mote-Marine-Lab",
+                                                        href="https://github.com/natewagner10/Manatee-App-Testing",
                                                         className="twelve columns left-aligned",
                                                     ),                                                                                                
                                             #    ],className="twelve columns",
