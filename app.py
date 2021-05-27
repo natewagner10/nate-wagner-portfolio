@@ -24,7 +24,7 @@ df = pd.DataFrame([
     dict(Organization="RGD Consulting Engineers", Start='2019-06-01', Finish='2019-08-01', Event="Internship/Work"),
     dict(Organization="Bradenton Economic Development Corp", Start='2019-09-01', Finish='2020-02-01', Event="Internship/Work"),
     dict(Organization="Economic Development Corp of Sarasota", Start='2020-01-01', Finish='2020-05-01', Event="Internship/Work"),    
-    dict(Organization="Mote Marine Lab", Start='2020-07-01', Finish='2020-12-01', Event="Internship/Work"),        
+    dict(Organization="Mote Marine Lab", Start='2020-07-01', Finish='2021-06-01', Event="Internship/Work"),        
     dict(Organization="Red Tide Research", Start='2020-07-01', Finish='2020-12-01', Event="Internship/Work"),            
     dict(Organization="New College of Florida, MSDS", Start='2019-08-01', Finish='2020-12-01', Event="Education")
 ])
@@ -87,7 +87,7 @@ server = app.server
 
 
 
-encoded_image = base64.b64encode(open('assets/dash_example.png', 'rb').read())
+encoded_image = base64.b64encode(open('assets/manateeAI_search_example.png', 'rb').read())
 encoded_image2 = base64.b64encode(open('assets/survey.png', 'rb').read())
 encoded_image3 = base64.b64encode(open('assets/cloud.png', 'rb').read())
 encoded_image4 = base64.b64encode(open('assets/ads_plot.png', 'rb').read())
@@ -105,7 +105,7 @@ app.layout = html.Div([
                 html.Div(
                             [
                                 html.Div(
-                                    [html.H3("Nathaniel Wagner",style = {'font-size': '48px','font':'HelveticaNeue','font-color': '#000000'})],
+                                    [html.H3("Nate Wagner",style = {'font-size': '48px','font':'HelveticaNeue','font-color': '#000000'})],
                                     className="seven columns main-title",
                                 ),
                                 html.Div(
@@ -174,16 +174,16 @@ app.layout = html.Div([
                                     dbc.Card(dbc.CardBody(
                                         [      
                                             #html.Img(src='data:image/png;base64,{}'.format(encoded_image.decode()), className = "six columns"),
-                                            html.H6(["Manatee Identification Application - (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.H6(["Manatee Identification Application - (Data Scientist)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.P(["My team and I developed an application designed to query the Mote Marine Lab image dataset for similar images to the input image based on scar shape​ and scar ​location.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.P(["The dashboard takes a scar and bounding box as input, and the program only searches for similar scars in that region. The user can also enter empty bounding boxes, signaling the program not to return images with scars in that region.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
+                                            html.P(["Our application segments scars via an object detection approach before extracting scar statistics which we use to find similar scars.​"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                                                                        
                                             html.Div([
                                             html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
                                             html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
                                             html.Li("Plotly Dash",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
                                             html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                        
                                             html.Li("Image Processing",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                    
-                                            html.Li("Siamese Neural Networks",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                                
+                                            html.Li("Mask-RCNN",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                                                                                                                
                                             #html.Div(
                                             #    [
                                                     #html.A(
@@ -207,6 +207,109 @@ app.layout = html.Div([
                                             
                                         ],className="twelve columns"),),
                                     id="collapse",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ),              
+                html.Div(
+                            [                                
+                                html.H5(["Sarasota Economic Development Corp"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button2",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Sarasota EDC - Automate Data Entry With Computer Vision (Data Scientist)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["This project explores various techniques to automate the data entry of surveys sent out by the EDC of Sarasota.​"],style = {'font-size': '14px','font':'HelveticaNeue'}, className="twelve columns"),                                            
+                                            html.Div([
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'} ,className="twelve columns"),
+                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Tenserflow - Keras",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
+                                            html.Li("Convolutional Neural Networks",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                        
+                                            html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Mask R-CNN",style = {'font-size': '14px','font':'HelveticaNeue'}),
+                                            html.Li("Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Presentation"),
+                                                        href="https://github.com/natewagner10/SarasotaEDC/blob/master/Computer%20Vision%20To%20Read%20Scanned%20Surveys%20(1).pdf",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/natewagner10/SarasotaEDC",
+                                                        className="twelve columns left-aligned",
+                                                    ),     
+                                                    html.A(
+                                                        html.Button("See Survey Results"),
+                                                        href="https://github.com/natewagner10/SarasotaEDC/blob/master/2019survey_focused_report.pdf",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                             
+                                                ],className="twelve columns",
+                                                )
+                                            ],className="six columns"),
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image2.decode()), className = "six columns", style={'height':'100%', 'width':'100%','vertical-align': 'middle'}),
+                                                ],className="six columns", style={'position': 'absolute', 'margin-top':'20px'}),                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse2",
+                                    className="twelve columns",                                         
+                                ),
+                            ],className="twelve columns",
+                        ),   
+                html.Div(
+                            [                                
+                                html.H5(["Red Tide Research Project"],className="nine columns"),
+                                dbc.Button(
+                                    "More Information",
+                                    id="collapse-button3",
+                                    className="three columns",
+                                    color="primary",
+                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
+                            ],className="twelve columns padded",
+                        ),                                
+                html.Div(
+                            [
+                                dbc.Collapse(
+                                    dbc.Card(dbc.CardBody(
+                                        [
+                                            html.H6(["Science and Environment Council (Research Associate)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.P(["New College of Florida professor Dr. Andrey Skripnikov and I use Twitter data to study the 2018 Florida red tide event. We find strong correlations between Twitter activity and local red tide conditions, which can be used to improve future response efforts."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
+                                            html.Div([
+                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
+                                            html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
+                                            html.Li("Sentiment Analysis",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
+                                            html.Div(
+                                                [
+                                                    html.A(
+                                                        html.Button("See Presentation"),
+                                                        href="https://github.com/natewagner10/Florida-Red-Tide/blob/master/Red_Tide_Presentation%20(3).pdf",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                        
+                                                    html.A(
+                                                        html.Button("See Github"),
+                                                        href="https://github.com/UsDAnDreS/Florida-Red-Tide-Event",
+                                                        className="twelve columns left-aligned",
+                                                    ),                                                                                                
+                                                ],className="twelve columns",
+                                                )
+                                            ],className="six columns"),
+                                            
+                                            html.Div([
+                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image3.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
+                                                ],className="six columns"),                                            
+                                            
+                                        ],className="twelve columns"),),
+                                    id="collapse3",
                                     className="twelve columns",                                         
                                 ),
                             ],className="twelve columns",
@@ -264,110 +367,7 @@ app.layout = html.Div([
                                     className="twelve columns",                                         
                                 ),
                             ],className="twelve columns",
-                        ),                
-                html.Div(
-                            [                                
-                                html.H5(["Sarasota Economic Development Corp"],className="nine columns"),
-                                dbc.Button(
-                                    "More Information",
-                                    id="collapse-button2",
-                                    className="three columns",
-                                    color="primary",
-                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
-                            ],className="twelve columns padded",
-                        ),                                
-                html.Div(
-                            [
-                                dbc.Collapse(
-                                    dbc.Card(dbc.CardBody(
-                                        [
-                                            html.H6(["Sarasota EDC - Automate Data Entry With Computer Vision (Data Science Intern)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.P(["This project explores various techniques to automate the data entry of surveys sent out by the EDC of Sarasota.​"],style = {'font-size': '14px','font':'HelveticaNeue'}, className="twelve columns"),                                            
-                                            html.Div([
-                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'} ,className="twelve columns"),
-                                            html.Li("Python",style = {'font-size': '14px','font':'HelveticaNeue'}),
-                                            html.Li("Tenserflow - Keras",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
-                                            html.Li("Convolutional Neural Networks",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                        
-                                            html.Li("Open CV, Pillow",style = {'font-size': '14px','font':'HelveticaNeue'}),
-                                            html.Li("Mask R-CNN",style = {'font-size': '14px','font':'HelveticaNeue'}),
-                                            html.Li("Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                            
-                                            html.Div(
-                                                [
-                                                    html.A(
-                                                        html.Button("See Presentation"),
-                                                        href="https://github.com/natewagner10/SarasotaEDC/blob/master/Computer%20Vision%20To%20Read%20Scanned%20Surveys%20(1).pdf",
-                                                        className="twelve columns left-aligned",
-                                                    ),                                                        
-                                                    html.A(
-                                                        html.Button("See Github"),
-                                                        href="https://github.com/natewagner10/SarasotaEDC",
-                                                        className="twelve columns left-aligned",
-                                                    ),     
-                                                    html.A(
-                                                        html.Button("See Survey Results"),
-                                                        href="https://github.com/natewagner10/SarasotaEDC/blob/master/2019survey_focused_report.pdf",
-                                                        className="twelve columns left-aligned",
-                                                    ),                                                                                             
-                                                ],className="twelve columns",
-                                                )
-                                            ],className="six columns"),
-                                            html.Div([
-                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image2.decode()), className = "six columns", style={'height':'100%', 'width':'100%','vertical-align': 'middle'}),
-                                                ],className="six columns", style={'position': 'absolute', 'margin-top':'20px'}),                                            
-                                        ],className="twelve columns"),),
-                                    id="collapse2",
-                                    className="twelve columns",                                         
-                                ),
-                            ],className="twelve columns",
-                        ),   
-                html.Div(
-                            [                                
-                                html.H5(["Red Tide Research Project"],className="nine columns"),
-                                dbc.Button(
-                                    "More Information",
-                                    id="collapse-button3",
-                                    className="three columns",
-                                    color="primary",
-                                    style = {'font-size': '10px','font':'HelveticaNeue'}),                        
-                            ],className="twelve columns padded",
-                        ),                                
-                html.Div(
-                            [
-                                dbc.Collapse(
-                                    dbc.Card(dbc.CardBody(
-                                        [
-                                            html.H6(["Science and Environment Council (Research Associate)"],style = {'font-size': '22px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.P(["New College of Florida professor Dr. Andrey Skripnikov and I use Twitter data to study the 2018 Florida red tide event. Our goal is to develop a framework to enhance response and assesment of future red tide events."],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),                                            
-                                            html.Div([
-                                            html.H6(["Tools Used:"],style = {'font-size': '14px','font':'HelveticaNeue'},className="twelve columns"),
-                                            html.Li("R - Tidyverse",style = {'font-size': '14px','font':'HelveticaNeue'}),                                           
-                                            html.Li("Sentiment Analysis",style = {'font-size': '14px','font':'HelveticaNeue'}),                                                                                       
-                                            html.Div(
-                                                [
-                                                    html.A(
-                                                        html.Button("See Presentation"),
-                                                        href="https://github.com/natewagner10/Florida-Red-Tide/blob/master/Red_Tide_Presentation%20(3).pdf",
-                                                        className="twelve columns left-aligned",
-                                                    ),                                                        
-                                                    html.A(
-                                                        html.Button("See Github"),
-                                                        href="https://github.com/UsDAnDreS/Florida-Red-Tide-Event",
-                                                        className="twelve columns left-aligned",
-                                                    ),                                                                                                
-                                                ],className="twelve columns",
-                                                )
-                                            ],className="six columns"),
-                                            
-                                            html.Div([
-                                                html.Img(src='data:image/png;base64,{}'.format(encoded_image3.decode()), className = "six columns", style={'height':'90%', 'width':'90%'}),
-                                                ],className="six columns"),                                            
-                                            
-                                        ],className="twelve columns"),),
-                                    id="collapse3",
-                                    className="twelve columns",                                         
-                                ),
-                            ],className="twelve columns",
-                        ),
+                        ),                  
                 html.Div(
                             [                                
                                 html.H5(["Time Series - US Wildfires"],className="nine columns"),
@@ -797,3 +797,4 @@ def toggle_collapse10(n, is_open):
 
 if __name__ == '__main__':
     app.run_server()
+
